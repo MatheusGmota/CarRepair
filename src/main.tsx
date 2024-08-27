@@ -6,6 +6,8 @@ import Error from './routes/Error/index.tsx'
 import Home from './routes/Home/index.tsx'
 import PaginaParticipantes from './routes/PaginaParticipantes/index.tsx'
 import Orcamento from './routes/Orçamento/index.tsx'
+import Cadastro from './routes/Cadastro/index.tsx'
+import Login from './routes/Login/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
       {
         path: '/orcamento',
         element: <Orcamento/>
+      },
+      {
+        path: '/cadastro',
+        element: <Cadastro/>
+      },
+      {
+        path: '/entrar',
+        element: <Login/>
       }
     ]
   }
