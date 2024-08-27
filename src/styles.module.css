@@ -59,43 +59,6 @@ main {
     }
 }
 
-
-.button {
-    min-width: 5vw;
-    min-height: 3vh;
-    padding: 5%;
-    background-color: #20A4F3;
-    border: none;
-    border-radius: 8px;
-    transition: all 300ms ease-out;
-    a {
-        font-family: 'Montserrat', sans-serif;
-        font-size: .9rem;
-        font-weight: 600;
-        color: #fff;
-        text-decoration: none;
-    }
-}
-
-.button:hover {
-    transform: scale(1.05);
-    background-color:#3faceb;
-}
-
-.btnCadastro {
-    font-size: .9rem;
-    font-weight: 600;
-    color: #20A4F3;
-    text-wrap: nowrap;
-    text-decoration: none;
-    transition: all 300ms ease-out;
-}
-
-.btnCadastro:hover {
-    transform: scale(1.05);
-    color: #fff;
-}
-
 .logo {
     min-width: 150%;
 }
