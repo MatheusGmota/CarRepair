@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "../../styles.module.css"
+import Button from "../Button/Button";
 
 export default function Menu() {
     return (
@@ -11,8 +12,8 @@ export default function Menu() {
             <li><Link to="/">Sobre Nós</Link></li>
         </ul>
         <div>
-          <Link className={styles.btnCadastro} to="/cadastro">Cadastre-se</Link>
-          <button className={styles.button}><Link to="/entrar">Entrar</Link></button>
+          <Button href="/cadastro" text="Cadastre-se" type="primary"></Button>
+          <Button href="/entrar" text="Entrar" type="primary" filled={true}></Button>
         </div>
       </nav>
     )
