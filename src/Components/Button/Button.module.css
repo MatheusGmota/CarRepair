@@ -1,0 +1,46 @@
+.btn {
+    --type: transparent;
+    --fill: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    min-width: 5vw;
+    min-height: 3vh;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 8px;
+    color: var(--type);
+    background-color: var(--fill);
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.primary {
+    --type: #20A4F3;
+}
+
+.secondary {
+    --type:#0177C8;
+}
+
+.tertiary {
+    --type: #fff;
+    color:#000!important;
+}
+
+.filled {
+    --bgk: 248 80% 98%;
+    --fill: var(--type);
+    color: hsl(var(--bgk))
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:is(:hover,:focus-visible) {
+    outline: none;
+    transform: scale(1.04);
+    backface-visibility: hidden;
+}
