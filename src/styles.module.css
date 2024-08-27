@@ -1,0 +1,101 @@
+
+.header {
+    display: flex;
+    border-bottom:0.5px solid #fff;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1%;
+        gap: 30px;
+        ul { 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 40%;
+            li {
+                list-style: none;
+                a {
+                    font-weight: 600;
+                    color: #fff;
+                    text-decoration: none;
+                    transition: all 400ms ease-in-out;
+                }
+            }
+            a:hover {
+                color: #20A4F3;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    div {
+        min-width: 11%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    min-height: 100%;
+}
+
+.footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    padding: .7vw;
+    text-align: center;
+    background-color: #000;
+    p {
+        color: #fff;
+        font-size: .8rem;
+    }
+}
+
+
+.button {
+    min-width: 5vw;
+    min-height: 3vh;
+    padding: 5%;
+    background-color: #20A4F3;
+    border: none;
+    border-radius: 8px;
+    transition: all 300ms ease-out;
+    a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: .9rem;
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color:#3faceb;
+}
+
+.btnCadastro {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #20A4F3;
+    text-wrap: nowrap;
+    text-decoration: none;
+    transition: all 300ms ease-out;
+}
+
+.btnCadastro:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.logo {
+    min-width: 150%;
+}
