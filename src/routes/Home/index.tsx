@@ -2,6 +2,7 @@ import Button from "../../Components/Button/Button";
 import { Card } from "../../Components/Card/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import styles from "../../styles.module.css"
 
 export default function Home() {
     return(
@@ -16,14 +17,18 @@ export default function Home() {
             </article>
             <article>
                 <h3>Ferramentas</h3>
-                <div>
-                    <Card 
-                    image="https://images.unsplash.com/1/type-away.jpg" 
+                <div className={styles.cardContent}>
+                    <Card  
                     icon={<FontAwesomeIcon icon={faEnvelope} />} 
                     title="Chatbot" 
-                    subtitle="RM-98634 Turma-1tdsy"
+                    type="primary">
+                    </Card>
+                    <Card 
+                    image="https://images.unsplash.com/1/type-away.jpg"  
+                    title="Nome" 
+                    subtitle="RM-98634 Turma-1TDSY"
                     type="secondary" 
-                    hrefSocialMedia={["blablaba","sfa","afs"]}>
+                    hrefSocialMedia={["github.com","sfa","afs"]}>
                     </Card>
                 </div>
             </article>
