@@ -4,7 +4,8 @@ import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-
 import styles from "./Card.module.css"
 
 export const Card = ({image,icon,title,subtitle,type,hrefSocialMedia}:CardInterface) => {
-    const [hrefGit, hrefInsta, hrefLkdin] = hrefSocialMedia ? hrefSocialMedia : ""
+    const [hrefGit, hrefInsta, hrefLkdin] = hrefSocialMedia ? hrefSocialMedia : "";
+    const [a,b] = subtitle? subtitle : ""
     return (
         <>
             <article className={`${styles.card} ${styles[type]}`}>
@@ -12,21 +13,17 @@ export const Card = ({image,icon,title,subtitle,type,hrefSocialMedia}:CardInterf
                     <img src={image} alt="Imagem Random"  className={styles.image}/>}
                 {icon &&
                     <div className={styles.iconCard}>{icon}</div>}
-                <div>
+                <div className={styles.body}>
                     <h3 className={styles.title}>{title}</h3>
-                    <p className={styles.subtitle}>{subtitle}</p>
+                    <p>{a}</p>
+                    <p>{b}</p>
                 </div>
+                {hrefGit && hrefInsta && hrefLkdin &&
                 <div className={styles.socialMedias}>
-                    {hrefGit && 
-                        <a href={hrefGit}><FontAwesomeIcon icon={faGithub}/></a>
-                    }
-                    {hrefInsta && 
-                        <a href={hrefInsta}><FontAwesomeIcon icon={faInstagram}/></a>
-                    }
-                    {hrefLkdin && 
-                        <a href={hrefLkdin}><FontAwesomeIcon icon={faLinkedin}/></a>
-                    }
-                </div>
+                    <a href={hrefGit}><FontAwesomeIcon icon={faGithub}/></a>
+                    <a href={hrefInsta}><FontAwesomeIcon icon={faInstagram}/></a>
+                    <a href={hrefLkdin}><FontAwesomeIcon icon={faLinkedin}/></a>
+                </div>}
             </article>
         </>
     )

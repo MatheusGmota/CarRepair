@@ -26,7 +26,7 @@ export default function Home() {
                     <Card 
                     image="https://images.unsplash.com/1/type-away.jpg"  
                     title="Nome" 
-                    subtitle="RM-98634 Turma-1TDSY"
+                    subtitle={["RM-98634", "Turma-1TDSY"]}
                     type="secondary" 
                     hrefSocialMedia={["github.com","sfa","afs"]}>
                     </Card>
