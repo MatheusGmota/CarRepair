@@ -47,8 +47,7 @@ main {
 article {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 9%;
+    justify-content: space-around;
     width: 65%;
     max-width: 80%;
     div > a {
@@ -85,6 +84,11 @@ p {
         font-size: .8rem;
         text-align: center;
     }
+}
+
+.cardContent {
+    display: flex;
+    margin-left: 2vw;
 }
 
 .logo {

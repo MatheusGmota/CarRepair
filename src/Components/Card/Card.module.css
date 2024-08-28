@@ -1,13 +1,21 @@
 .card {
-    flex: 1 1 300px;
     position: relative;
-    place-content: center;
     place-items: center;
-    max-width: 30vw;
+    width: 280px;
+    min-height: 300px;
     padding: 2%;
     border-radius: 8px;
     box-shadow: 10px 4px 20px #00000052;
     background-color: #18181B;
+}
+
+.primary {
+
+}
+
+.secondary{
+    background-color: white;
+    color: black;
 }
 
 .image {
@@ -21,6 +29,11 @@
 .title {
     text-align: center;
     font-weight: bold;
-    font-size: 1.5rem;
+}
+
+.socialMedias {
+    a{
+        color: black;
+    }
 }
 
