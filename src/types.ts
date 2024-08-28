@@ -10,5 +10,5 @@ export interface CardInterface {
     title: string,
     subtitle?: string,
     hrefSocialMedia?: string[],
-    type: string
+    type: 'primary' | 'secondary'
 }
