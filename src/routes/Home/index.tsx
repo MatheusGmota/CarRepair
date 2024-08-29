@@ -1,7 +1,7 @@
 import Button from "../../Components/Button/Button";
 import { Card } from "../../Components/Card/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faHandHoldingDollar, faComments, faWrench, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 import styles from "../../styles.module.css"
 
 export default function Home() {
@@ -19,16 +19,31 @@ export default function Home() {
                 <h3>Ferramentas</h3>
                 <div className={styles.cardContent}>
                     <Card  
-                    icon={<FontAwesomeIcon icon={faEnvelope} />} 
-                    title="Chatbot" 
+                    icon={<FontAwesomeIcon icon={faHandHoldingDollar} />} 
+                    title="Orçamento"
+                    description="Utilize nossa ferramenta para gerar um orçamento preciso e detalhado para a manutenção do seu veículo, com base nas necessidades específicas do seu automóvel."
                     type="primary">
                     </Card>
-                    <Card 
-                    image="https://images.unsplash.com/1/type-away.jpg"  
-                    title="Nome" 
-                    subtitle={["RM-98634", "Turma-1TDSY"]}
-                    type="secondary" 
-                    hrefSocialMedia={["github.com","sfa","afs"]}>
+
+                    <Card  
+                    icon={<FontAwesomeIcon icon={faComments} />} 
+                    title="Chatbot"
+                    description="Nosso chatbot inteligente está pronto para ajudá-lo com orçamentos e responder a perguntas técnicas, como troca de óleo, a qualquer hora do dia."
+                    type="primary">
+                    </Card>
+
+                    <Card  
+                    icon={<FontAwesomeIcon icon={faWrench} />} 
+                    title="Mecânicas"
+                    description="Faça uma estimativa de custos personalizada para o seu projeto em apenas alguns cliques. Simples, rápido e preciso."
+                    type="primary">
+                    </Card>
+
+                    <Card  
+                    icon={<FontAwesomeIcon icon={faCalendarDays} />} 
+                    title="Agendamento" 
+                    description="Simplifique o processo de agendamento de serviços com nosso sistema integrado, que permite marcar sua próxima visita ao centro automotivo de forma rápida e fácil."
+                    type="primary">
                     </Card>
                 </div>
             </article>
