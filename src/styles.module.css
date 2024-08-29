@@ -87,8 +87,9 @@ p {
 }
 
 .cardContent {
-    display: flex;
-    margin-left: 2vw;
+    display: inline;
+    justify-content: center;
+    margin-left: 0.8vw;
 }
 
 .logo {
