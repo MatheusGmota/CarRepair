@@ -8,7 +8,8 @@ export interface CardInterface {
     image?: string,
     icon?: JSX.Element,
     title: string,
-    subtitle?: string[],
-    hrefSocialMedia?: string[],
+    bodyText?: string[],
+    description?: string,
     type: 'primary' | 'secondary'
+    hrefSocialMedia?: string[],
 }
