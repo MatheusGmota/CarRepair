@@ -44,8 +44,11 @@
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 1%;
+    align-items: center;
+    gap: 10vh;
+    padding: 2%;
     min-height: 100%;
 }
 
