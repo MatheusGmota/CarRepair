@@ -8,9 +8,10 @@
     padding: 20px;
     margin: 10px;
     text-align: center;
-    width: clamp(230px,230px,280px); 
+    min-width: 230px;
     min-height: 300px;
     background-color: #18181B;
+    cursor: pointer;
 }
 
 .iconCard {
@@ -31,7 +32,7 @@
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
-        transition: all .5s ease;
+        transition: all .5s ease-in;
     }
 
     .theBack {
@@ -46,6 +47,8 @@
         border-radius: 8px;
         background-color: #24242977;
         small {
+            text-align: center;
+            width: 100%;
             font-size: 0.8rem;
         }
     }
