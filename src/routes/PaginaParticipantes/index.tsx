@@ -18,7 +18,7 @@ export default function PaginaIntegrantes() {
     return (
         <main>
             <h1>Página dos integrantes</h1>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridAutoRows: "15%", width: "80%" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", width: "80%" }}>
                 <Card
                     title={felipe.nome}
                     type="secondary"
