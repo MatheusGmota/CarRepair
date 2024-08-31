@@ -1,4 +1,7 @@
 import { Card } from "../../Components/Card/Card";
+import fotoFelipe from "..//..//Assets/foto-felipe.jpg"
+import fotoLucas from "..//..//Assets/foto-lucas.jpg"
+import fotoMatheus from "..//..//Assets/foto-matheus.jpg"
 
 export default function PaginaIntegrantes() {
     const turma: string = "Turma - 1TDSPY"
@@ -15,9 +18,11 @@ export default function PaginaIntegrantes() {
     return (
         <main>
             <h1>Página dos integrantes</h1>
-            <div>
-                <Card title={felipe.nome}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridAutoRows: "15%", width: "80%" }}>
+                <Card
+                    title={felipe.nome}
                     type="secondary"
+                    image={fotoFelipe}
                     bodyText={[felipe.rm, turma]}
                     hrefGit={gitFelipe}
                     hrefInsta={instaFelipe}
@@ -25,6 +30,7 @@ export default function PaginaIntegrantes() {
                 />
                 <Card title={lucas.nome}
                     type="secondary"
+                    image={fotoLucas}
                     bodyText={[lucas.rm, turma]}
                     hrefGit={gitLucas}
                     hrefInsta={instaLucas}
@@ -32,12 +38,18 @@ export default function PaginaIntegrantes() {
                 />
                 <Card title={matheus.nome}
                     type="secondary"
+                    image={fotoMatheus}
                     bodyText={[matheus.rm, turma]}
                     hrefGit={gitMatheus}
                     hrefInsta={instaMatheus}
                     hrefLkdin={lkdinMatheus}
                 />
             </div>
+            <a target="_blank" style={{ textDecoration: "underline" }} href="https://github.com/MatheusGmota/CarRepair">
+                <h3>
+                    Link do repositorio git
+                </h3>
+            </a>
         </main>
     )
 }
