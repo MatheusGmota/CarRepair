@@ -1,0 +1,25 @@
+.paper{
+    margin-top: 37%;
+    background-color: #fff;
+    width: 70%;
+    height: 67%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    border-radius: 8px;
+}
+
+h1{
+    position: relative;
+    color: #20A4F3;
+}
+
+h2{
+    color: #20A4F3;
+}
+
+.inputs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
