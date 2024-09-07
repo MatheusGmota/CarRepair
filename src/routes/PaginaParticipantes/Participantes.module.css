@@ -1,0 +1,16 @@
+main{
+    height: 100%;
+    margin-top: -1%
+}
+
+.conteudoCards{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    margin-top: -0.2rem;
+}
+
+a{
+    text-decoration: underline; 
+    margin-top: -0.4rem;
+}
