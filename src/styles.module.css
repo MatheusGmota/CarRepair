@@ -56,7 +56,7 @@ main {
     bottom: 0;
     position: fixed;
     background-color: #000;
-    p {
+    h5 {
         color: #fff;
         font-size: .8rem;
     }
