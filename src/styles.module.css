@@ -79,7 +79,7 @@ p {
     bottom: 0;
     position: absolute;
     background-color: #000;
-    p {
+    h5 {
         color: #fff;
         font-size: .8rem;
         text-align: center;

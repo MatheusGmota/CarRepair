@@ -22,6 +22,12 @@ h2{
     color: #20A4F3;
 }
 
+.inputs{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .inputsL{
     margin-right: 5%;
     margin-top: 5%;
@@ -38,15 +44,58 @@ input{
     color: black;
 }
 
-.inputs{
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
 .btnEnviar{
     width: 90%;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 2%;
+}
+
+p{
+    display: flex;
+    flex-direction: row;
+}
+
+.btnLogin{
+    margin-left: -6%;
+}
+
+@media screen and (max-width:700px) {
+    .paper{
+        width: 70%;
+    }
+
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 10%;
+    }   
+    
+    .inputsL{
+        margin-right: 0%;
+        margin-top: 3%;
+        margin-bottom: 0%;
+        width: 90%;
+    }
+    
+    .inputsR{
+        margin-left: 0%;
+        margin-top: 3%;
+        margin-bottom: 0%;
+        width: 90%;
+    }
+    
+
+    .btnEnviar{
+        margin-top: 4%;
+        margin-bottom: 5%;
+    }
+
+    p{
+        margin-top: -3%;
+        display: flex;
+        flex-direction: row;
+    }
+
 }
