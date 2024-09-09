@@ -12,7 +12,7 @@
 
 * **Clonando o repositório**:
 ```Bash
-git clone https://seu-repositorio.git
+git clone https://github.com/MatheusGmota/CarRepair.git
 ```
 
 * **Instalando as dependências**:
@@ -42,9 +42,3 @@ npm run build
     Permite ao usuário preencher um formulário com as informações do veículo e gera um orçamento personalizado.
 
 ... (continuar com as demais funcionalidades)
-
-## Contribuições
-...
-
-## Licença
-Este projeto está licenciado sob a MIT License.
