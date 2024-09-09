@@ -1,8 +1,8 @@
-
 .header {
     display: flex;
-    border-bottom:0.5px solid #fff;
+    border-bottom: 0.5px solid #fff;
     width: 100%;
+
     .nav {
         display: flex;
         justify-content: space-between;
@@ -10,14 +10,41 @@
         width: 100%;
         padding: 1%;
         gap: 30px;
-        ul { 
+
+        .menuHamburguer {
+            width: 70%;
+
+            div {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+
+        .menuAberto {
+            height: 28%;
+            background-color: #082B49;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+
+        .menuFechado {
+            display: none;
+        }
+
+        ul {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 1vw;
             width: 20vw;
+
             li {
                 list-style: none;
+
                 a {
                     font-weight: 600;
                     font-size: .8rem;
@@ -27,6 +54,7 @@
                     transition: all 400ms ease-in-out;
                 }
             }
+
             a:hover {
                 color: #20A4F3;
                 text-decoration: underline;
@@ -42,6 +70,10 @@
     }
 }
 
+.icone {
+    font-size: 22px;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -49,13 +81,14 @@ main {
     min-height: 100%;
 }
 
-.footer{
+.footer {
     text-align: center;
     padding: .7vw;
     width: 100%;
     bottom: 0;
     position: fixed;
     background-color: #000;
+
     h5 {
         color: #fff;
         font-size: .8rem;
@@ -64,4 +97,41 @@ main {
 
 .logo {
     width: 80%;
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        .nav {
+            margin: 2%
+        }
+        
+        ul {
+            margin-left: 19%;
+            margin-top: 2%;
+    
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid #cac9c9;
+                border-left: 1px solid #cac9c9;
+                width: 100%;
+                a {
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: #fff;
+                    text-decoration: none;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                    text-wrap: nowrap;
+                    transition: all 400ms ease-in-out;
+                }
+            }
+    
+            a:hover {
+                color: #20A4F3;
+                text-decoration: underline;
+            }
+        }
+    }
 }
