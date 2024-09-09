@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "../../styles.module.css";
 import Button from "../Button/Button";
 import logoImage from "/carrepair.svg";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 

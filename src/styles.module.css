@@ -13,7 +13,6 @@
 
         .menuHamburguer {
             width: 70%;
-
             div {
                 display: flex;
                 flex-direction: row-reverse;
@@ -22,7 +21,7 @@
 
         .menuAberto {
             height: 28%;
-            background-color: #082B49;
+            background-color: #252525;
             width: 50%;
             display: flex;
             flex-direction: column;
@@ -106,8 +105,8 @@ main {
         }
         
         ul {
-            margin-left: 19%;
-            margin-top: 2%;
+            right: 0;
+            top: 51px;
     
             li {
                 display: flex;
