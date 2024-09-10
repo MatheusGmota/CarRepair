@@ -26,8 +26,8 @@ export default function Menu() {
 
   return (
     <nav className={styles.nav}>
-      <Link to="/"><img className={styles.logo} src={logoImage} alt="Logo Carrepair" /></Link>
-      {mobileWidth <= 700 ? (
+      <Link to="/" className={styles.logo}><img src={logoImage} alt="Logo Carrepair" /></Link>
+      {mobileWidth <= 730 ? (
         <>
           <section className={styles.menuHamburguer}>
             <div onClick={toogleMenu}>
