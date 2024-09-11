@@ -37,10 +37,10 @@ export default function Cadastro() {
           <Button href="/" text="Enviar" type="primary" filled={true} />
         </div>
       </div>
-      <h4>
+      <p>
         Já possui login?
         <Button href="/entrar" text="Login" type="primary"/>
-      </h4>
+      </p>
     </main>
   )
 }

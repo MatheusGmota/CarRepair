@@ -42,6 +42,8 @@ input{
     width: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .btnEnviar{
@@ -49,4 +51,19 @@ input{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 2%;
+}
+
+p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 700px){
+    .paper{
+        width: 80%;
+        height: 100%;
+    }
+    .inputs{
+        grid-template-columns: 0;
+    }
 }
