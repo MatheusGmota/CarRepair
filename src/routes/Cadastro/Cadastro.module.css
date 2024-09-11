@@ -60,16 +60,11 @@ input{
 }
 
 p{
-    font-size: 20px;
-    font-weight: bold;
+    display: flex;
+    font-size: 1rem;
 }
 
-@media screen and (max-width: 700px){
-    .paper{
-        width: 80%;
-        height: 100%;
-    }
-    .inputs{
-        grid-template-columns: 0;
-    }
+.btnLogin{
+    margin-left: -6%;
+    font-size: 1rem;
 }
