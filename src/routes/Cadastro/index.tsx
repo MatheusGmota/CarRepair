@@ -38,7 +38,9 @@ export default function Cadastro() {
         </div>
       </div>
       <p>
+      <p>
         Já possui login?
+        <div className={estilo.btnLogin}>
         <Button href="/entrar" text="Login" type="primary"/>
       </p>
     </main>

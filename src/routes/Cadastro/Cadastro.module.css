@@ -22,6 +22,12 @@ h2{
     color: #20A4F3;
 }
 
+.inputs{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .inputsL{
     margin-right: 5%;
     margin-top: 5%;
