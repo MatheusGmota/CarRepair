@@ -2,6 +2,7 @@ import { Card } from "../../Components/Card/Card";
 import fotoFelipe from "..//..//Assets/foto-felipe.jpg"
 import fotoLucas from "..//..//Assets/foto-lucas.jpg"
 import fotoMatheus from "..//..//Assets/foto-matheus.jpg"
+import estilo from "./Pagina.module.css"
 
 export default function PaginaIntegrantes() {
     const turma: string = "Turma - 1TDSPY"
@@ -16,9 +17,9 @@ export default function PaginaIntegrantes() {
 
 
     return (
-        <main>
+        <main className={estilo.mainLayout}>
             <h1>Página dos integrantes</h1>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", width: "80%" }}>
+            <div className={estilo.cardsLayout}>
                 <Card
                     title={felipe.nome}
                     type="secondary"
@@ -45,10 +46,10 @@ export default function PaginaIntegrantes() {
                     hrefLkdin={lkdinMatheus}
                 />
             </div>
-            <a target="_blank" style={{ textDecoration: "underline" }} href="https://github.com/MatheusGmota/CarRepair">
-                <h3>
+            <a target="_blank" href="https://github.com/MatheusGmota/CarRepair">
+                <p>
                     Link do repositorio git
-                </h3>
+                </p>
             </a>
         </main>
     )

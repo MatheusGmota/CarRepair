@@ -5,7 +5,7 @@ import estilo from "./Cadastro.module.css"
 export default function Cadastro() {
   return (
     <main>
-      <div className={estilo.paper} style={{ display: "flex", flexDirection: "column" }}>
+      <div className={estilo.paper}>
         <h1>Cadastre-se</h1>
         <div className={estilo.inputs}>
           <h2 className={estilo.inputsL}>
@@ -37,10 +37,12 @@ export default function Cadastro() {
           <Button href="/" text="Enviar" type="primary" filled={true} />
         </div>
       </div>
-      <h4>
+      <p>
+      <p>
         Já possui login?
+        <div className={estilo.btnLogin}>
         <Button href="/entrar" text="Login" type="primary"/>
-      </h4>
+      </p>
     </main>
   )
 }

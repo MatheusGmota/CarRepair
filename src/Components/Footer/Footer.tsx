@@ -3,7 +3,7 @@ import styles from "../../styles.module.css"
 export default function Footer() {
     return (
       <footer className={styles.footer}>
-        <p>&copy; Desenvolvido por a.code | Fiap - 2024.</p>
+        <h5>&copy; Desenvolvido por a.code | Fiap - 2024.</h5>
       </footer>
     )
 }
