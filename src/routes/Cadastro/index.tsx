@@ -6,6 +6,7 @@ export default function Cadastro() {
   return (
     <main>
       <div className={estilo.paper}>
+      <div className={estilo.paper}>
         <h1>Cadastre-se</h1>
         <div className={estilo.inputs}>
           <h2 className={estilo.inputsL}>
