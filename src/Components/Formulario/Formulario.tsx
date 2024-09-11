@@ -18,14 +18,14 @@ const messageErr = 'Esse campo é obrigatório*';
 const resolver: Resolver<FormValues> = async (values) => {
   return {
     values: values.placa ? values : {},
-    errors: !values.placa
-      ? {
-          placa: {
-            type: 'required',
-            message: messageErr,
-          },
-        }
-      : {},
+    errors: !values.placa 
+    ? {
+      placa: {
+        type: 'required', 
+        message: messageErr,
+      },
+    } 
+    : {},
   };
 };
 
@@ -63,28 +63,28 @@ export const Formulario = () => {
         return (
           <div className={styles.forms1}>
             <div>
-              <label htmlFor="">Placa</label>
-              <input type='text' {...register('placa')} placeholder="Digite aqui sua placa" required/>
+              <label htmlFor="placa">Placa</label>
+              <input {...register('placa')} placeholder="Digite aqui sua placa" />
               <span className={styles.err}>{errors?.placa && errors.placa.message}</span>
             </div>
             <div>
-              <label htmlFor="">Marca</label>
-              <input type='text' {...register('marca')} placeholder="Digite aqui a marca do veículo" required/>
+              <label htmlFor="marca">Marca</label>
+              <input {...register('marca')} placeholder="Digite aqui a marca do veículo" />
               <span className={styles.err}>{errors?.marca && errors.marca.message}</span>
             </div>
             <div>
-              <label htmlFor="">Modelo</label>
-              <input type='text' {...register('modelo')} placeholder="Digite aqui o modelo do veículo" required/>
+              <label htmlFor="modelo">Modelo</label>
+              <input {...register('modelo')} placeholder="Digite aqui o modelo do veículo" />
               <span className={styles.err}>{errors?.modelo && errors.modelo.message}</span>
             </div>
             <div>
-              <label htmlFor="">Kilometragem</label>
-              <input type='number' {...register('kilometragem')} placeholder="Digite aqui a kilometragem" required/>
+              <label htmlFor="kilometragem">Kilometragem</label>
+              <input {...register('kilometragem')} placeholder="Digite aqui a kilometragem" />
               <span className={styles.err}>{errors?.kilometragem && errors.kilometragem.message}</span>
             </div>
             <div>
-              <label htmlFor="">Ano</label>
-              <input type='number' {...register('ano')} placeholder="Digite aqui o ano" maxLength={4} required/>
+              <label htmlFor="ano">Ano</label>
+              <input {...register('ano')} placeholder="Digite aqui o ano"  />
               <span className={styles.err}>{errors?.ano && errors.ano.message}</span>
             </div>
             <div>
