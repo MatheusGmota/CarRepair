@@ -1,5 +1,6 @@
 import { useState } from "react";
 import estilo from "./login.module.css"
+import { Link } from "react-router-dom";
 
 export default function Login() {
 
@@ -35,6 +36,9 @@ export default function Login() {
           <button>Entrar</button>
         </form>
       </section>
+      <p>
+        Não possui cadastro? <strong> <Link to="/cadastro">Cadastre-se</Link> </strong>
+      </p>
     </main>
   );
 }

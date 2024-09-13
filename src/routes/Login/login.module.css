@@ -1,12 +1,15 @@
 main{
     display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
     justify-content: center;
     align-items: center;
     height: 80vh;
 
     h1{
         color: #20a4f3;
-        font-size: 32px;
+        font-size: 40px;
+        font-weight: 500;
     }
 }
 
@@ -45,5 +48,19 @@ form{
     label{
         color: #20a4f3 ;
         font-weight: 400;
+    }
+
+    button{
+        padding: 2%;
+        width: 5vw;
+        background-color: #20a4f3;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    button:hover{
+        cursor: pointer;
     }
 }
