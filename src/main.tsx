@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         element: <Login/>
       },
       {
-        path: '/chatbot/:id',
+        path: 'orcamento/chatbot/:id',
         element: <Chatbot/>
       }
     ]
