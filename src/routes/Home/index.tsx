@@ -3,6 +3,7 @@ import { Card } from "../../Components/Card/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandHoldingDollar, faComments, faWrench, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 import styles from "../../styles.module.css"
+import FormContato from "../../Components/FormContato/FormContato";
 
 export default function Home() {
     return(
@@ -53,6 +54,10 @@ export default function Home() {
                 <div>
                     <Button href="/orcamento" text="Gerar Orçamento" type="tertiary" filled={true}/>
                 </div>
+            </article>
+            <article>
+                <h3>Contate-nos</h3>
+                <FormContato/>
             </article>
         </main>
     )
