@@ -1,0 +1,82 @@
+main {
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 1vh;
+    height: 85vh;
+    width: 100%;
+    
+}
+/* meter um position fixed no input */
+
+form {
+    background-color: #18181B;
+    border: 1px solid #0A3E65;
+    border-radius: 20px;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: fixed;
+}
+
+input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 100%;
+    padding: 1%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    color: #54acfa;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.message.user {
+    position: relative;
+    left: 15vw;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    min-width: 20vw;
+    min-height: 50px;
+    padding: 2%;
+    border: 1px solid #0A3E65;
+    border-radius: 8px 8px 0px 8px;
+    background-color: #082B49;
+}
+
+.message.chatbot {
+    position: relative;
+    right: 15vw;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    min-width: 20vw;
+    min-height: 50px;
+    padding: 2%;
+    border: 1px solid #0A3E65;
+    border-radius: 8px 8px 8px 0px;
+    background-color: #18181B;
+}
