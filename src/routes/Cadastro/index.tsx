@@ -4,7 +4,7 @@ import estilo from "./Cadastro.module.css"
 
 export default function Cadastro() {
   return (
-    <>
+    <main>
       <form className={estilo.formulario}>
         <h1>Cadastre-se</h1>
         <div className={estilo.forms1}>
@@ -39,10 +39,8 @@ export default function Cadastro() {
       </form>
       <p>
         Já possui login?
-        <div className={estilo.btnLogin}>
-          <Button href="/entrar" text="Login" type="primary"/>
-        </div>
+        <Button href="/entrar" text="Login" type="primary"/>
       </p>
-    </>
+    </main>
   )
 }

@@ -18,7 +18,7 @@ export default function PaginaIntegrantes() {
 
     return (
         <main>
-            <h1>Página dos integrantes</h1>
+            <h2>Página dos integrantes</h2>
             <div className={estilo.conteudoCards}>
                 <Card
                     title={felipe.nome}

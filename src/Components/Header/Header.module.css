@@ -75,3 +75,28 @@
         height: 100%;
     }
 }
+
+@media screen and (max-width: 730px) {
+    .header .nav .menuAberto {
+        width: 50vw;
+        right: 0;
+        top: 4rem;
+        gap: 0 !important;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #cac9c9;
+            border-left: 1px solid #cac9c9;
+            width: 100%;
+
+            a {
+                margin-top: 5%;
+                margin-bottom: 5%;
+                transition: all 400ms ease-in-out;
+            }
+        }
+    }
+
+}

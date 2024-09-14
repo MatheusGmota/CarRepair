@@ -19,19 +19,19 @@ const messageErr = 'Esse campo é obrigatório*';
 const resolver: Resolver<FormValues> = async (values) => {
   return {
     values: values.placa ? values : {},
-    errors: !values.placa 
-    ? {
-      placa: {
-        type: 'required', 
-        message: messageErr,
-      },
-    } 
-    : {},
+    errors: !values.placa
+      ? {
+        placa: {
+          type: 'required',
+          message: messageErr,
+        },
+      }
+      : {},
   };
 };
 
 export const Formulario = () => {
-  const [step, setStep] = useState(1); 
+  const [step, setStep] = useState(1);
   const navegando = useNavigate();
   const [formData, setFormData] = useState<FormValues>({
     placa: '',
@@ -51,7 +51,7 @@ export const Formulario = () => {
 
   const onSubmit = handleSubmit((data) => {
     setFormData({ ...formData, ...data });
-    if (step < 2) setStep(step + 1); 
+    if (step < 2) setStep(step + 1);
     else {
       setFormData({ ...formData, ...data });
       alert('Final Form Data: ' + formData);
@@ -86,11 +86,11 @@ export const Formulario = () => {
             </div>
             <div>
               <label htmlFor="ano">Ano</label>
-              <input {...register('ano')} placeholder="Digite aqui o ano"  />
+              <input {...register('ano')} placeholder="Digite aqui o ano" />
               <span className={styles.err}>{errors?.ano && errors.ano.message}</span>
             </div>
             <div>
-                <Button href='submit' text="Próximo" type="secondary" filled={true} />
+              <Button href='submit' text="Próximo" type="secondary" filled={true} />
             </div>
           </div>
         );
@@ -98,27 +98,27 @@ export const Formulario = () => {
         return (
           <div className={styles.forms2}>
             <div>
-                <label htmlFor="descricao">Descrição</label>
-                <textarea {...register('descricao')} placeholder='Descreva os problemas que seu veículo tem sofrido'></textarea>
+              <label htmlFor="descricao">Descrição</label>
+              <textarea {...register('descricao')} placeholder='Descreva os problemas que seu veículo tem sofrido'></textarea>
             </div>
             <div>
-                <label htmlFor="">Manutenções</label>
-                <select {...register('manutencao')} >
-                  <option defaultChecked value="" >Selecione</option>
-                  <option value="alinhamento">Alinhamento</option>
-                  <option value="arCondicionado">Ar condicionado</option>
-                  <option value="arrefecimento">Arrefecimento</option>
-                  <option value="balanceamentoEGeo">Balanceamento e Geometria</option>
-                  <option value="correias">Correias</option>
-                  <option value="discoPastilhaFreio">Discos e Pastilhas de Freio</option>
-                  <option value="embreagens">Embreagens</option>
-                  <option value="filtrosEVelas">Filtros e Velas de Ignição</option>
-                  <option value="outro">Outro</option>
+              <label htmlFor="">Manutenções</label>
+              <select {...register('manutencao')} >
+                <option defaultChecked value="" >Selecione</option>
+                <option value="alinhamento">Alinhamento</option>
+                <option value="arCondicionado">Ar condicionado</option>
+                <option value="arrefecimento">Arrefecimento</option>
+                <option value="balanceamentoEGeo">Balanceamento e Geometria</option>
+                <option value="correias">Correias</option>
+                <option value="discoPastilhaFreio">Discos e Pastilhas de Freio</option>
+                <option value="embreagens">Embreagens</option>
+                <option value="filtrosEVelas">Filtros e Velas de Ignição</option>
+                <option value="outro">Outro</option>
 
-                </select>
+              </select>
             </div>
             <div>
-                <Button href="submit" text="Gerar Orçamento" type="secondary" filled={true} />
+              <Button href="submit" text="Gerar Orçamento" type="secondary" filled={true} />
             </div>
           </div>
         );
@@ -128,8 +128,10 @@ export const Formulario = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className={styles.formulario}>
-      {renderStep()}
-    </form>
+    <main>
+      <form onSubmit={onSubmit} className={styles.formulario}>
+        {renderStep()}
+      </form>
+    </main>
   );
 };

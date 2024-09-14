@@ -8,8 +8,8 @@
     padding: 20px;
     margin: 10px;
     text-align: center;
-    min-width: 230px;
-    min-height: 300px;
+    min-width: 250px;
+    min-height: 55vh;
     background-color: #18181B;
     cursor: pointer;
 }
