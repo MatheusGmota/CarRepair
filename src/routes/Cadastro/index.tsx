@@ -4,45 +4,45 @@ import estilo from "./Cadastro.module.css"
 
 export default function Cadastro() {
   return (
-    <main>
-      <div className={estilo.paper}>
-        <h1>Cadastre-se</h1>
-        <div className={estilo.inputs}>
-          <h2 className={estilo.inputsL}>
-            Nome
-            <input type="text" name="nome" placeholder="Digite seu nome" />
-          </h2>
-          <h2 className={estilo.inputsR}>
-            Sobrenome
-            <input type="text" name="sobrenome" placeholder="Digite seu sobrenome" />
-          </h2>
-          <h2 className={estilo.inputsL}>
-            Cpf
-            <input type="text" name="cpf" placeholder="xxx.xxx.xxx-xx" />
-          </h2>
-          <h2 className={estilo.inputsR}>
-            Telefone
-            <input type="text" name="telefone" placeholder="(xx) x xxxx - xxxx" />
-          </h2>
-          <h2 className={estilo.inputsL}>
-            E-mail
-            <input type="text" name="email" placeholder="Digite seu e-mail" />
-          </h2>
-          <h2 className={estilo.inputsR}>
-            Senha
-            <input type="text" name="senha" placeholder="Digite sua senha" />
-          </h2>
+    <>
+      <form className={estilo.formulario}>
+        <div className={estilo.forms1}>
+          <h1>Cadastre-se</h1>
+            <div>
+              <label>Nome</label>
+              <input type="text" placeholder="Digite seu nome"/>
+            </div>
+            <div>
+              <label>Sobrenome</label>
+              <input type="text" placeholder="Digite seu nome"/>
+            </div>
+            <div>
+              <label>Cpf</label>
+              <input type="text" placeholder="xxx.xxx.xxx-xx"/>
+            </div>
+            <div>
+              <label>Telefone</label>
+              <input type="text" placeholder="(xx) x xxxx - xxxx"/>
+            </div>
+            <div>
+              <label>E-mail</label>
+              <input type="text" placeholder="Digite seu e-mail"/>
+            </div>
+            <div>
+              <label>Senha</label>
+              <input type="text" placeholder="Digite sua senha"/>
+            </div>
+          <div>
+            <Button href="/" text="Enviar" type="primary" filled={true} />
+          </div>
         </div>
-        <div className={estilo.btnEnviar}>
-          <Button href="/" text="Enviar" type="primary" filled={true} />
-        </div>
-      </div>
+      </form>
       <p>
         Já possui login?
         <div className={estilo.btnLogin}>
         <Button href="/entrar" text="Login" type="primary"/>
         </div>
       </p>
-    </main>
+    </>
   )
 }

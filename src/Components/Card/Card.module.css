@@ -65,9 +65,6 @@
 }
 
 .card.secondary{
-    cursor: default;
-    min-width: 250px;
-    min-height: 450px;
     .title {
         text-wrap: wrap;
         font-size: 1.3rem;
@@ -89,7 +86,7 @@ small {
 .image {
     border: 1px solid #000;
     max-width: 60%;
-    max-height: 40%;
+    max-height: 10%;
     border-radius: 50%;
     aspect-ratio: 12/12;
     object-fit: cover;

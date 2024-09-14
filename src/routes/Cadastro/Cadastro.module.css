@@ -1,75 +1,69 @@
-.paper{
-    margin-top: 1%;
-    background-color: #fff;
-    width: 70%;
-    height: 68%;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-    border-radius: 8px;
+.formulario {
+    padding: 2%;
+    min-height: 50vh;
+    width: 60vw;
+    border: 1px solid #858585;
+    border-radius:10px;
+    box-shadow: 4px 4px 30px #1d1d1d;
+    background-color: #18181B;
 }
 
-h1{
-    margin-top: 2%;
-    position: relative;
-    color: #20A4F3;
-    font-size: 36px;
-}
-
-h2{
-    color: #20A4F3;
-}
-
-.inputs{
-    width: 90%;
+.forms1 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 
-.inputsL{
-    margin-right: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.inputsR{
-    margin-left: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-input{
-    color: black;
-}
-
-.inputs{
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.btnEnviar{
-    width: 90%;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 2%;
-}
-
-p{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-@media screen and (max-width: 700px){
-    .paper{
-        width: 80%;
-        height: 100%;
+    div {
+        display: flex;
+        flex-direction: column;
     }
-    .inputs{
-        grid-template-columns: 0;
+
+    div:last-child {
+        display: block;
+        grid-column: span 2;
+        &
+        button {
+            float: right
+        }
+    }
+
+    label {
+        display: block;
+        padding: 2%;
+        text-align: center;
+    }
+}
+
+
+input {
+    background: transparent;
+    border: 1px solid #0177C8;
+    border-radius: 999px;
+    height: 4.8vh;
+    min-width: 20vw;
+    outline: none;
+    padding: 3%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.err {
+    font-size: 0.8rem;
+    height: 1vh;
+    width: 100%;
+    color: red;
+}
+
+@media screen and (max-width: 1000px) {
+    .formulario {
+        width: 100%;
+        min-width: 100%;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .formulario {
+        min-width: 80%;
+        grid-template-columns: 1fr;
     }
 }

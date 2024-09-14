@@ -2,7 +2,7 @@ import { Card } from "../../Components/Card/Card";
 import fotoFelipe from "..//..//Assets/foto-felipe.jpg"
 import fotoLucas from "..//..//Assets/foto-lucas.jpg"
 import fotoMatheus from "..//..//Assets/foto-matheus.jpg"
-import estilo from "./Pagina.module.css"
+import estilo from "./Participantes.module.css"
 
 export default function PaginaIntegrantes() {
     const turma: string = "Turma - 1TDSPY"
@@ -17,7 +17,7 @@ export default function PaginaIntegrantes() {
 
 
     return (
-        <main className={estilo.mainLayout}>
+        <main>
             <h1>Página dos integrantes</h1>
             <div className={estilo.cardsLayout}>
                 <Card

@@ -24,7 +24,7 @@
 }
 
 body {
-    min-height: 100vh;
+    min-height: auto;
 }
 
 .header {
@@ -103,7 +103,6 @@ main {
     align-items: center;
     gap: 3vh;
     padding: 2%;
-    min-height: 100%;
 }
 
 article {
