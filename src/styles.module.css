@@ -48,6 +48,14 @@ body {
             transition: 0.5s;
             li {
                 list-style: none;
+                a {
+                    font-weight: 600;
+                    font-size: .8rem;
+                    color: #fff;
+                    text-decoration: none;
+                    text-wrap: nowrap;
+                    transition: all 400ms ease-in-out;
+                }
             }
 
             a:hover {

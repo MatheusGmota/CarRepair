@@ -29,7 +29,8 @@ export default function PaginaIntegrantes() {
                     hrefInsta={instaFelipe}
                     hrefLkdin={lkdinFelipe}
                 />
-                <Card title={lucas.nome}
+                <Card 
+                    title={lucas.nome}
                     type="secondary"
                     image={fotoLucas}
                     bodyText={[lucas.rm, turma]}
@@ -37,7 +38,8 @@ export default function PaginaIntegrantes() {
                     hrefInsta={instaLucas}
                     hrefLkdin={lkdinLucas}
                 />
-                <Card title={matheus.nome}
+                <Card 
+                    title={matheus.nome}
                     type="secondary"
                     image={fotoMatheus}
                     bodyText={[matheus.rm, turma]}
