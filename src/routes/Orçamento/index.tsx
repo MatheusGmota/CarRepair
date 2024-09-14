@@ -1,7 +1,13 @@
+import { Formulario } from "../../Components/Formulario/Formulario";
+
 export default function Orcamento() {
+
+    const title = "Formulário"
+    
     return(
         <main>
-            <h1>Página do Orçamento</h1>
+            <h1>{title}</h1>
+            <Formulario/>
         </main>
     )
 }

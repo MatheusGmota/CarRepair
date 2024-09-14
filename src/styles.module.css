@@ -48,7 +48,6 @@ body {
             transition: 0.5s;
             li {
                 list-style: none;
-
                 a {
                     font-weight: 600;
                     font-size: .8rem;
@@ -99,23 +98,62 @@ body {
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 1%;
+    align-items: center;
+    gap: 3vh;
+    padding: 2%;
     min-height: 100%;
 }
 
-.footer {
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 65%;
+    max-width: 80%;
+    div > a {
+            float: right;
+    }
+    
+}
+
+a {
+    font-weight: 600;
+    font-size: .8rem;
+    color: #fff;
+    text-decoration: none;
+    text-wrap: nowrap;
+    transition: all 400ms ease-in-out;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    text-align: justify;
+    margin-left: 2vw;
+}
+
+.footer{
     text-align: center;
     padding: .7vw;
     width: 100%;
     bottom: 0;
-    position: fixed;
+    position: relative;
     background-color: #000;
 
     h5 {
         color: #fff;
         font-size: .8rem;
+        text-align: center;
     }
+}
+
+.cardContent {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 0.8vw;
 }
 
 .logo {

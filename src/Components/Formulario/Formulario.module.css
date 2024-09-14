@@ -1,0 +1,44 @@
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 2%;
+    min-width: 50%;
+    min-height: 30%;
+    height: 50%;
+    border: 1px solid #858585;
+    border-radius:10px;
+    box-shadow: 4px 4px 30px #1d1d1d;
+    background-color: #18181B;
+}
+
+label {
+    display: block;
+    padding: 2%;
+    text-align: center;
+}
+
+input {
+    background: transparent;
+    border: 1px solid #0177C8;
+    border-radius: 999px;
+    height: 4.8vh;
+    min-width: 100%;
+    outline: none;
+    padding: 3%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.err {
+    width: 100%;
+    color: red;
+}
+
+@media screen and (max-width: 500px) {
+    .formulario {
+        min-width: 80%;
+        max-width: 80%;
+        padding: 30px;
+        grid-template-columns: 1fr;
+    }
+}
