@@ -139,7 +139,7 @@ p {
     padding: .7vw;
     width: 100%;
     bottom: 0;
-    position: relative;
+    position: absolute;
     background-color: #000;
 
     h5 {
