@@ -1,4 +1,14 @@
+h1{
+    font-size: 1rem;
+}
 
+.conteudoCards{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    margin-top: -0.2rem;
+    padding: 2%;
+}
 
 a{
     text-decoration: underline; 
@@ -10,4 +20,4 @@ a{
         grid-template-columns: 0;
         width: 80%;
     }
-}
+}   

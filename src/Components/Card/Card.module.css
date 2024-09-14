@@ -86,7 +86,7 @@ small {
 .image {
     border: 1px solid #000;
     max-width: 60%;
-    max-height: 10%;
+    height: auto;
     border-radius: 50%;
     aspect-ratio: 12/12;
     object-fit: cover;

@@ -1,9 +1,9 @@
 import Button from "../../Components/Button/Button";
 import { Card } from "../../Components/Card/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandHoldingDollar, faComments, faWrench, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
-import styles from "../../styles.module.css"
+import { faHandHoldingDollar, faComments, faWrench, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import FormContato from "../../Components/FormContato/FormContato";
+import styles from "./Home.module.css"
 
 export default function Home() {
     return(

@@ -1,3 +1,7 @@
+main {
+    padding: 0;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -8,9 +12,8 @@
     width: 100%;
     
 }
-/* meter um position fixed no input */
 
-form {
+.inputWrap {
     background-color: #18181B;
     border: 1px solid #0A3E65;
     border-radius: 20px;
@@ -19,27 +22,27 @@ form {
     align-items: center;
     padding: 0 10px;
     position: fixed;
+    input {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        height: 50px;
+        width: 100%;
+        padding: 1%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+    }
+    
+    button {
+        background-color: transparent;
+        border: none;
+    }
+    
+    button:hover {
+        color: #54acfa;
+    }
 }
 
-input {
-    outline: none;
-    background-color: transparent;
-    border: none;
-    height: 50px;
-    width: 100%;
-    padding: 1%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-}
-
-button:hover {
-    color: #54acfa;
-}
 
 .messages {
     display: flex;

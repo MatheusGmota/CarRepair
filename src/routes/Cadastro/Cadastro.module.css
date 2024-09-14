@@ -6,6 +6,10 @@
     border-radius:10px;
     box-shadow: 4px 4px 30px #1d1d1d;
     background-color: #18181B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .forms1 {

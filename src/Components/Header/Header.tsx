@@ -1,5 +1,5 @@
 import Menu from "../Menu/Menu";
-import styles from "../../styles.module.css"
+import styles from "./Header.module.css"
 
 export default function Header() {
     return (

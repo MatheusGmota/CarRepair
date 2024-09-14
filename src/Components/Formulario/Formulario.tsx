@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useForm, Resolver } from 'react-hook-form';
 import styles from './Formulario.module.css';
 import Button from '../Button/Button';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 type FormValues = {
   placa: string;
@@ -31,6 +32,7 @@ const resolver: Resolver<FormValues> = async (values) => {
 
 export const Formulario = () => {
   const [step, setStep] = useState(1); 
+  const navegando = useNavigate();
   const [formData, setFormData] = useState<FormValues>({
     placa: '',
     marca: '',
@@ -53,7 +55,7 @@ export const Formulario = () => {
     else {
       setFormData({ ...formData, ...data });
       alert('Final Form Data: ' + formData);
-      
+      navegando('/confirmacao/informacao')
     }
   });
 

@@ -19,7 +19,7 @@ export default function PaginaIntegrantes() {
     return (
         <main>
             <h1>Página dos integrantes</h1>
-            <div className={estilo.cardsLayout}>
+            <div className={estilo.conteudoCards}>
                 <Card
                     title={felipe.nome}
                     type="secondary"
