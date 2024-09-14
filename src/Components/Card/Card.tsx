@@ -3,9 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import styles from "./Card.module.css"
 
-export const Card = ({image, icon, title, bodyText, description, type, hrefSocialMedia}:CardInterface) => {
-
-    const [hrefGit, hrefInsta, hrefLkdin] = hrefSocialMedia ? hrefSocialMedia : "";
+export const Card = ({image, icon, title, bodyText, description, type, hrefGit, hrefInsta, hrefLkdin}:CardInterface) => {
 
     const [rm, turma] = bodyText? bodyText : ""
 
@@ -32,9 +30,9 @@ export const Card = ({image, icon, title, bodyText, description, type, hrefSocia
                         <small>{turma}</small>
                     </div>
                     <div className={styles.iconSocial}>
-                        <a href={hrefGit}><FontAwesomeIcon icon={faGithub}/></a>
-                        <a href={hrefInsta}><FontAwesomeIcon icon={faInstagram}/></a>
-                        <a href={hrefLkdin}><FontAwesomeIcon icon={faLinkedin}/></a>
+                        <a target="_blank" href={hrefGit}><FontAwesomeIcon icon={faGithub}/></a>
+                        <a target="_blank" href={hrefInsta}><FontAwesomeIcon icon={faInstagram}/></a>
+                        <a target="_blank" href={hrefLkdin}><FontAwesomeIcon icon={faLinkedin}/></a>
                     </div>
                 </div>
             }

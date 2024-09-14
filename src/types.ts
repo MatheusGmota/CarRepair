@@ -11,5 +11,7 @@ export interface CardInterface {
     bodyText?: string[],
     description?: string,
     type: 'primary' | 'secondary'
-    hrefSocialMedia?: string[],
+    hrefGit?: string,
+    hrefInsta?: string,
+    hrefLkdin?: string,
 }
