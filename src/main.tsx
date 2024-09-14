@@ -8,6 +8,7 @@ import PaginaParticipantes from './routes/PaginaParticipantes/index.tsx'
 import Orcamento from './routes/Orçamento/index.tsx'
 import Cadastro from './routes/Cadastro/index.tsx'
 import Login from './routes/Login/index.tsx'
+import ConfirmaInformcacao from './routes/ConfirmaInformacao/index.tsx'
 import Chatbot from './routes/Chatbot/index.tsx'
 
 const router = createBrowserRouter([
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
         element: <Login/>
       },
       {
-        path: '/chatbot/:id',
+        path:"/confirmacao/informacao",
+        element: <ConfirmaInformcacao/>
+      },
+      {
+        path: 'orcamento/chatbot/:id',
         element: <Chatbot/>
       }
     ]

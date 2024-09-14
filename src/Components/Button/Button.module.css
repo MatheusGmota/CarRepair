@@ -35,12 +35,14 @@
     color: hsl(var(--bgk))
 }
 
-.btn:focus {
-    outline: none;
-}
-
 .btn:is(:hover,:focus-visible) {
     outline: none;
     transform: scale(1.04);
     backface-visibility: hidden;
+}
+
+.btn:is(:hover,:focus-visible).tertiary {
+    background-color:hsl(var(--bgk))/2;
+    border: 1px solid var(--fill);
+    color: #fff!important;
 }
