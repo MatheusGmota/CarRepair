@@ -1,7 +1,7 @@
 .conteudoCards{
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
-    width: 70%;
+    width: 80%;
     margin-top: -0.2rem;
     padding: 2%;
 }
@@ -11,9 +11,15 @@ a{
     margin-top: -0.4rem;
 }
 
+@media screen and (max-width:1025px) {
+    .conteudoCards{
+        width: 100%;
+    }
+}   
+
 @media screen and (max-width:700px) {
     .conteudoCards{
         grid-template-columns: 0;
-        width: 80%;
+        width: 100%;
     }
 }   
