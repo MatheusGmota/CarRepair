@@ -12,7 +12,6 @@ import Chatbot from './routes/Chatbot/index.tsx'
 import { Formulario } from './Components/Formulario/Formulario.tsx'
 import ConfirmaInformcacao from './Components/ConfirmaInformacao/index.tsx'
 import OrcamentoFinal from './Components/OrcamentoFinal/OrcamentoFinal.tsx'
-import "styles.module.css"
 
 const router = createBrowserRouter([
   {
