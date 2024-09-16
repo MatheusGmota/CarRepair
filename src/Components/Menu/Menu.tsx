@@ -26,7 +26,7 @@ export default function Menu() {
 
   return (
     <nav className={styles.nav}>
-      <Link to="/" className={styles.logo}><img src={logoImage} alt="Logo Carrepair" /></Link>
+      <Link to="/sobre-nos" className={styles.logo}><img src={logoImage} alt="Logo Carrepair" /></Link>
       {mobileWidth <= 730 ? (
         <>
           <section className={styles.menuHamburguer}>
