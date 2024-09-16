@@ -23,18 +23,15 @@
     box-sizing: border-box;
 }
 
-body{
-    min-height: 100vh;
-}
-
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
     gap: 3vh;
     padding: 2%;
-    min-height: 100%;
+    margin-top: 4rem;
+    min-height: 88.3vh;
 }
 
 article {

@@ -2,8 +2,7 @@
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
     width: 80%;
-    margin-top: -0.2rem;
-    padding: 2%;
+    gap:1rem
 }
 
 a{
