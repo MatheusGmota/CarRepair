@@ -5,10 +5,10 @@
     justify-content: center;
     border: 1px solid #767676;
     border-radius: 2%;
-    height: 45vh;
-    width: 40vw;
+    height: 50vh;
     min-width: 25vw;
     row-gap: 4vh;
+    padding: 2%;
     background-color: #18181B;
     form{
         display: flex;
@@ -26,7 +26,7 @@
             padding: 3%;
             width: 22vw;
             border-radius: 2vh;
-            border: 2px solid #20a4f3;
+            border: 1px solid #20a4f3;
             background-color: transparent;
         }
         label{
@@ -39,4 +39,9 @@
             cursor: pointer;
         }
     }
+
+}
+
+p > strong > a:hover {
+    color: #20a4f3;
 }

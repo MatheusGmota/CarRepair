@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Button from "../../Components/Button/Button"
 import styles from "./Cadastro.module.css"
 
@@ -38,7 +39,7 @@ export default function Cadastro() {
       </form>
       <p>
         Já possui login?
-        <Button href="/entrar" text="Login" type="primary"/>
+        <strong> <Link to="/entrar">Login</Link> </strong>
       </p>
     </main>
   )
