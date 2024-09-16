@@ -1,11 +1,18 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Button from "../../Components/Button/Button"
 import styles from "./Cadastro.module.css"
 
 export default function Cadastro() {
+
+  const nav = useNavigate()
+
+  const handleSubmit = () =>  {
+    nav("/entrar")
+  }
+
   return (
     <main>
-      <form className={styles.formulario}>
+      <form className={styles.formulario} onSubmit={handleSubmit}>
         <h1>Cadastre-se</h1>
         <div className={styles.forms1}>
           <div>
