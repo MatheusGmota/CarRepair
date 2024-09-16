@@ -6,7 +6,8 @@ export default function Cadastro() {
 
   const nav = useNavigate()
 
-  const handleSubmit = () =>  {
+  const handleSubmit = (event: { preventDefault: () => void; }) =>  {
+    event.preventDefault();
     nav("/entrar")
   }
 
