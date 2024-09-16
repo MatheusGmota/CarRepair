@@ -33,12 +33,12 @@ npm run build
 
 ## Funcionalidades
 
-* **Página de participantes:**
-    [Incluir imagem da página de participantes]
-    Mostra uma lista de todos os participantes do projeto.
-
 * **Orçamento:**
-    [Incluir imagem do formulário de orçamento e do resultado]
     Permite ao usuário preencher um formulário com as informações do veículo e gera um orçamento personalizado.
 
-... (continuar com as demais funcionalidades)
+## Integrantes 
+* Felipe Seiki Hashiguti - RM 98985
+* Lucas Corradini Silveira - RM 555118
+* Matheus Gregorio Mota - RM 557254
+
+
