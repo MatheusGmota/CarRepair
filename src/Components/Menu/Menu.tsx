@@ -35,7 +35,7 @@ export default function Menu() {
             </div>
             <ul className={isOpen ? styles.menuAberto : styles.menuFechado}>
               <li><Link to="/pagina-participantes">Página dos Participantes</Link></li>
-              <li><Link to="/">Orçamento</Link></li>
+              <li><Link to="/orcamento">Orçamento</Link></li>
               <li><Link to="/sobre-nos">Sobre Nós</Link></li>
               <li><Link to="/cadastro">Cadastre-se</Link></li>
               <li><Link to="/entrar">Entrar</Link></li>
@@ -46,7 +46,7 @@ export default function Menu() {
         <>
           <ul>
             <li><Link to="/pagina-participantes">Página dos Participantes</Link></li>
-            <li><Link to="/">Orçamento</Link></li>
+            <li><Link to="/orcamento">Orçamento</Link></li>
             <li><Link to="/sobre-nos">Sobre Nós</Link></li>
           </ul>
           <div>

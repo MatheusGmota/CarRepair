@@ -2,19 +2,12 @@ import { useState } from 'react';
 import { useForm, Resolver } from 'react-hook-form';
 import styles from './Formulario.module.css';
 import Button from '../Button/Button';
-import { useNavigate } from 'react-router-dom';
-
-type FormValues = {
-  placa: string;
-  marca: string;
-  modelo: string;
-  kilometragem: number;
-  ano: number;
-  descricao: string,
-  manutencao: string
-};
+import { useNavigate, useParams } from 'react-router-dom';
+import { FormValues } from '../../types';
 
 const messageErr = 'Esse campo é obrigatório*';
+
+
 
 const resolver: Resolver<FormValues> = async (values) => {
   return {
@@ -31,9 +24,11 @@ const resolver: Resolver<FormValues> = async (values) => {
 };
 
 export const Formulario = () => {
+  const {id} = useParams()
   const [step, setStep] = useState(1);
   const navegando = useNavigate();
   const [formData, setFormData] = useState<FormValues>({
+    userId: id,
     placa: '',
     marca: '',
     modelo: '',
@@ -54,8 +49,8 @@ export const Formulario = () => {
     if (step < 2) setStep(step + 1);
     else {
       setFormData({ ...formData, ...data });
-      alert('Final Form Data: ' + formData);
-      navegando('/confirmacao/informacao')
+      localStorage.setItem("formValues", JSON.stringify(data))
+      navegando(`/orcamento/confirmacao/${id}`)
     }
   });
 

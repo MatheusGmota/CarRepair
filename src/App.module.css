@@ -34,19 +34,6 @@ main {
     min-height: 88.3vh;
 }
 
-article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 65%;
-    max-width: 80%;
-
-    div>a {
-        float: right;
-    }
-
-}
-
 a {
     font-weight: 600;
     font-size: .8rem;

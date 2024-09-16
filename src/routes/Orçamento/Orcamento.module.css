@@ -3,12 +3,12 @@ h2{
 }
 
 .mainSection{
-    width: 75%;
+    width: 100%;
     height: 58vh;
     display: flex;
     flex-direction: column;
-    row-gap: 5vh;
-
+    align-items: center;
+    gap: 5vh;
 }
 
 .sectionBox{

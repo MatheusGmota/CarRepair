@@ -2,6 +2,9 @@ import Button from "../../Components/Button/Button";
 import estilo from "./Orcamento.module.css";
 
 export default function Orcamento() {
+
+    const id = 1;
+
     return (
         <main className={estilo.main}>
             <section className={estilo.mainSection}>
@@ -25,7 +28,7 @@ export default function Orcamento() {
                                 <li>Rápido e conveniente.</li>
                             </ul>
                             <article>
-                                <Button type="primary" href="/orcamento/chatbot/:id" text="Gerar Orçamento" filled={true}/>
+                                <Button type="primary" href={`/orcamento/chatbot/${id}`} text="Gerar Orçamento" filled={true}/>
                             </article>
                         </div>
                         <div className={estilo.forms}>
@@ -40,7 +43,7 @@ export default function Orcamento() {
                                 <li>Ideal para quem já sabe o problema do veículo.</li>
                             </ul>
                             <article>
-                            <Button type="primary" href="/orcamento/formulario/:id" text="Gerar Orçamento" filled={true}/>
+                            <Button type="primary" href={`/orcamento/formulario/${id}`}text="Gerar Orçamento" filled={true}/>
                             </article>
                         </div>
                     </article>
