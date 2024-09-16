@@ -1,7 +1,18 @@
 import estilo from "./Confirmacao.module.css"
 import botao from "../../Components/Button/Button.module.css"
+import { useNavigate } from "react-router-dom";
 
 export default function ConfirmaInformcacao() {
+    const navegando = useNavigate();
+    
+    const orcamento = () => {
+        navegando('/orcamento/formulario/:id/orcamento-final')
+    };
+
+    const edicao = () => {
+        navegando('/orcamento/formulario/:id')
+    };
+
     return (
         <main>
             <section className={estilo.container}>
@@ -16,10 +27,10 @@ export default function ConfirmaInformcacao() {
                     <li><p>Manutenção</p><p>XXXX</p></li>
                 </ul>   
                 <div className={estilo.containerBotoes}>
-                    <button className={`${botao.btn} ${botao.tertiary} ${botao.filled}`}>
+                    <button onClick={edicao} className={`${botao.btn} ${botao.tertiary} ${botao.filled}`}>
                         Editar
                     </button>
-                    <button className={`${botao.btn} ${botao.primary} ${botao.filled}`}>
+                    <button onClick={orcamento} className={`${botao.btn} ${botao.primary} ${botao.filled}`}>
                         Confirmar
                     </button>
                 </div>
