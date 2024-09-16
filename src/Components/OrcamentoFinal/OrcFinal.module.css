@@ -1,0 +1,29 @@
+.containerContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+}
+
+.orcamento{
+    display: flex;
+    border: 1px solid #20A4F3;
+    border-radius: 8px;
+    width: 70vw;
+    height: 10vh;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.links{
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    
+}

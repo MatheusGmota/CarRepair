@@ -15,3 +15,14 @@ export interface CardInterface {
     hrefInsta?: string,
     hrefLkdin?: string,
 }
+
+export type FormValues = {
+    userId:  string | undefined,
+    placa: string;
+    marca: string;
+    modelo: string;
+    kilometragem: number;
+    ano: number;
+    descricao: string,
+    manutencao: string
+  };

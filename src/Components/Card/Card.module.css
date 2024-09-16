@@ -8,8 +8,7 @@
     padding: 20px;
     margin: 10px;
     text-align: center;
-    min-width: 230px;
-    min-height: 300px;
+    min-width: 250px;
     background-color: #18181B;
     cursor: pointer;
 }
@@ -22,6 +21,7 @@
 }
 
 .card.primary {
+    height: 300px;
     transform-style: preserve-3d;
     .theFront {
         display: flex;
@@ -65,9 +65,7 @@
 }
 
 .card.secondary{
-    cursor: default;
-    min-width: 250px;
-    min-height: 450px;
+    min-height: 60vh;
     .title {
         text-wrap: wrap;
         font-size: 1.3rem;
@@ -89,7 +87,7 @@ small {
 .image {
     border: 1px solid #000;
     max-width: 60%;
-    max-height: 40%;
+    height: auto;
     border-radius: 50%;
     aspect-ratio: 12/12;
     object-fit: cover;

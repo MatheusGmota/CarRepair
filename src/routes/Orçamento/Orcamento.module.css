@@ -1,21 +1,14 @@
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-}
-
 h2{
     font-weight: 500;
 }
 
 .mainSection{
-    width: 75%;
+    width: 100%;
     height: 58vh;
     display: flex;
     flex-direction: column;
-    row-gap: 5vh;
-
+    align-items: center;
+    gap: 5vh;
 }
 
 .sectionBox{

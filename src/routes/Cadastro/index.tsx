@@ -1,47 +1,45 @@
+import { Link } from "react-router-dom"
 import Button from "../../Components/Button/Button"
-import estilo from "./Cadastro.module.css"
-
+import styles from "./Cadastro.module.css"
 
 export default function Cadastro() {
   return (
     <main>
-      <div className={estilo.paper}>
+      <form className={styles.formulario}>
         <h1>Cadastre-se</h1>
-        <div className={estilo.inputs}>
-          <h2 className={estilo.inputsL}>
-            Nome
-            <input type="text" name="nome" placeholder="Digite seu nome" />
-          </h2>
-          <h2 className={estilo.inputsR}>
-            Sobrenome
-            <input type="text" name="sobrenome" placeholder="Digite seu sobrenome" />
-          </h2>
-          <h2 className={estilo.inputsL}>
-            Cpf
-            <input type="text" name="cpf" placeholder="xxx.xxx.xxx-xx" />
-          </h2>
-          <h2 className={estilo.inputsR}>
-            Telefone
-            <input type="text" name="telefone" placeholder="(xx) x xxxx - xxxx" />
-          </h2>
-          <h2 className={estilo.inputsL}>
-            E-mail
-            <input type="text" name="email" placeholder="Digite seu e-mail" />
-          </h2>
-          <h2 className={estilo.inputsR}>
-            Senha
-            <input type="text" name="senha" placeholder="Digite sua senha" />
-          </h2>
+        <div className={styles.forms1}>
+          <div>
+            <label>Nome</label>
+            <input className={styles.input} type="text" placeholder="Digite seu nome"/>
+          </div>
+          <div>
+            <label>Sobrenome</label>
+            <input className={styles.input} type="text" placeholder="Digite seu nome"/>
+          </div>
+          <div>
+            <label>Cpf</label>
+            <input className={styles.input} type="text" placeholder="xxx.xxx.xxx-xx"/>
+          </div>
+          <div>
+            <label>Telefone</label>
+            <input className={styles.input} type="text" placeholder="(xx) x xxxx - xxxx"/>
+          </div>
+          <div>
+            <label>E-mail</label>
+            <input className={styles.input} type="text" placeholder="Digite seu e-mail"/>
+          </div>
+          <div>
+            <label>Senha</label>
+            <input className={styles.input} type="text" placeholder="Digite sua senha"/>
+          </div>
+          <div>
+            <Button href="submit" text="Enviar" type="primary" filled={true} />
+          </div>
         </div>
-        <div className={estilo.btnEnviar}>
-          <Button href="/" text="Enviar" type="primary" filled={true} />
-        </div>
-      </div>
+      </form>
       <p>
         Já possui login?
-        <div className={estilo.btnLogin}>
-        <Button href="/entrar" text="Login" type="primary"/>
-        </div>
+        <strong> <Link to="/entrar">Login</Link> </strong>
       </p>
     </main>
   )

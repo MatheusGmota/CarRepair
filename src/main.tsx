@@ -3,13 +3,15 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Error from './routes/Error/index.tsx'
-import Home from './routes/Home/index.tsx'
+import About from "./routes/About/index.tsx"
 import PaginaParticipantes from './routes/PaginaParticipantes/index.tsx'
 import Orcamento from './routes/Orçamento/index.tsx'
 import Cadastro from './routes/Cadastro/index.tsx'
 import Login from './routes/Login/index.tsx'
-import ConfirmaInformcacao from './routes/ConfirmaInformacao/index.tsx'
 import Chatbot from './routes/Chatbot/index.tsx'
+import { Formulario } from './Components/Formulario/Formulario.tsx'
+import ConfirmaInformcacao from './Components/ConfirmaInformacao/index.tsx'
+import OrcamentoFinal from './Components/OrcamentoFinal/OrcamentoFinal.tsx'
 
 const router = createBrowserRouter([
   {
@@ -19,15 +21,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home/>
-      },
-      {
-        path: '/pagina-participantes',
-        element: <PaginaParticipantes/>
+        element: <Orcamento/>
       },
       {
         path: '/orcamento',
         element: <Orcamento/>
+      },
+      {
+        path: '/sobre-nos',
+        element: <About/>
+      },
+      {
+        path: '/pagina-participantes',
+        element: <PaginaParticipantes/>
       },
       {
         path: '/cadastro',
@@ -38,13 +44,21 @@ const router = createBrowserRouter([
         element: <Login/>
       },
       {
-        path:"/confirmacao/informacao",
+        path: '/orcamento/formulario/:id',
+        element: <Formulario/>
+      },
+      {
+        path: '/orcamento/chatbot/:id',
+        element: <Chatbot/>
+      },
+      {
+        path: '/orcamento/confirmacao/:id',
         element: <ConfirmaInformcacao/>
       },
       {
-        path: 'orcamento/chatbot/:id',
-        element: <Chatbot/>
-      }
+        path: '/orcamento/formulario/orcamento-final/:id',
+        element: <OrcamentoFinal/>
+      },
     ]
   }
 ])

@@ -2,36 +2,33 @@ import { useState } from 'react';
 import { useForm, Resolver } from 'react-hook-form';
 import styles from './Formulario.module.css';
 import Button from '../Button/Button';
-
-type FormValues = {
-  placa: string;
-  marca: string;
-  modelo: string;
-  kilometragem: number;
-  ano: number;
-  descricao: string,
-  manutencao: string
-};
+import { useNavigate, useParams } from 'react-router-dom';
+import { FormValues } from '../../types';
 
 const messageErr = 'Esse campo é obrigatório*';
+
+
 
 const resolver: Resolver<FormValues> = async (values) => {
   return {
     values: values.placa ? values : {},
-    errors: !values.placa 
-    ? {
-      placa: {
-        type: 'required', 
-        message: messageErr,
-      },
-    } 
-    : {},
+    errors: !values.placa
+      ? {
+        placa: {
+          type: 'required',
+          message: messageErr,
+        },
+      }
+      : {},
   };
 };
 
 export const Formulario = () => {
-  const [step, setStep] = useState(1); 
+  const {id} = useParams()
+  const [step, setStep] = useState(1);
+  const navegando = useNavigate();
   const [formData, setFormData] = useState<FormValues>({
+    userId: id,
     placa: '',
     marca: '',
     modelo: '',
@@ -49,11 +46,11 @@ export const Formulario = () => {
 
   const onSubmit = handleSubmit((data) => {
     setFormData({ ...formData, ...data });
-    if (step < 2) setStep(step + 1); 
+    if (step < 2) setStep(step + 1);
     else {
       setFormData({ ...formData, ...data });
-      alert('Final Form Data: ' + formData);
-      
+      localStorage.setItem("formValues", JSON.stringify(data))
+      navegando(`/orcamento/confirmacao/${id}`)
     }
   });
 
@@ -64,31 +61,31 @@ export const Formulario = () => {
           <div className={styles.forms1}>
             <div>
               <label htmlFor="placa">Placa</label>
-              <input {...register('placa')} placeholder="Digite aqui sua placa" />
+              <input className={styles.input} {...register('placa')} placeholder="Digite aqui sua placa" />
               <span className={styles.err}>{errors?.placa && errors.placa.message}</span>
             </div>
             <div>
               <label htmlFor="marca">Marca</label>
-              <input {...register('marca')} placeholder="Digite aqui a marca do veículo" />
+              <input className={styles.input} {...register('marca')} placeholder="Digite aqui a marca do veículo" />
               <span className={styles.err}>{errors?.marca && errors.marca.message}</span>
             </div>
             <div>
               <label htmlFor="modelo">Modelo</label>
-              <input {...register('modelo')} placeholder="Digite aqui o modelo do veículo" />
+              <input className={styles.input} {...register('modelo')} placeholder="Digite aqui o modelo do veículo" />
               <span className={styles.err}>{errors?.modelo && errors.modelo.message}</span>
             </div>
             <div>
               <label htmlFor="kilometragem">Kilometragem</label>
-              <input {...register('kilometragem')} placeholder="Digite aqui a kilometragem" />
+              <input className={styles.input} {...register('kilometragem')} placeholder="Digite aqui a kilometragem" />
               <span className={styles.err}>{errors?.kilometragem && errors.kilometragem.message}</span>
             </div>
             <div>
               <label htmlFor="ano">Ano</label>
-              <input {...register('ano')} placeholder="Digite aqui o ano"  />
+              <input className={styles.input} {...register('ano')} placeholder="Digite aqui o ano" />
               <span className={styles.err}>{errors?.ano && errors.ano.message}</span>
             </div>
             <div>
-                <Button href='submit' text="Próximo" type="secondary" filled={true} />
+              <Button href='submit' text="Próximo" type="secondary" filled={true} />
             </div>
           </div>
         );
@@ -96,27 +93,27 @@ export const Formulario = () => {
         return (
           <div className={styles.forms2}>
             <div>
-                <label htmlFor="descricao">Descrição</label>
-                <textarea {...register('descricao')} placeholder='Descreva os problemas que seu veículo tem sofrido'></textarea>
+              <label htmlFor="descricao">Descrição</label>
+              <textarea {...register('descricao')} placeholder='Descreva os problemas que seu veículo tem sofrido'></textarea>
             </div>
             <div>
-                <label htmlFor="">Manutenções</label>
-                <select {...register('manutencao')} >
-                  <option defaultChecked value="" >Selecione</option>
-                  <option value="alinhamento">Alinhamento</option>
-                  <option value="arCondicionado">Ar condicionado</option>
-                  <option value="arrefecimento">Arrefecimento</option>
-                  <option value="balanceamentoEGeo">Balanceamento e Geometria</option>
-                  <option value="correias">Correias</option>
-                  <option value="discoPastilhaFreio">Discos e Pastilhas de Freio</option>
-                  <option value="embreagens">Embreagens</option>
-                  <option value="filtrosEVelas">Filtros e Velas de Ignição</option>
-                  <option value="outro">Outro</option>
+              <label htmlFor="">Manutenções</label>
+              <select {...register('manutencao')} >
+                <option defaultChecked value="" >Selecione</option>
+                <option value="alinhamento">Alinhamento</option>
+                <option value="arCondicionado">Ar condicionado</option>
+                <option value="arrefecimento">Arrefecimento</option>
+                <option value="balanceamentoEGeo">Balanceamento e Geometria</option>
+                <option value="correias">Correias</option>
+                <option value="discoPastilhaFreio">Discos e Pastilhas de Freio</option>
+                <option value="embreagens">Embreagens</option>
+                <option value="filtrosEVelas">Filtros e Velas de Ignição</option>
+                <option value="outro">Outro</option>
 
-                </select>
+              </select>
             </div>
             <div>
-                <Button href="submit" text="Gerar Orçamento" type="secondary" filled={true} />
+              <Button href="submit" text="Gerar Orçamento" type="secondary" filled={true} />
             </div>
           </div>
         );
@@ -126,8 +123,10 @@ export const Formulario = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className={styles.formulario}>
-      {renderStep()}
-    </form>
+    <main>
+      <form onSubmit={onSubmit} className={styles.formulario}>
+        {renderStep()}
+      </form>
+    </main>
   );
 };

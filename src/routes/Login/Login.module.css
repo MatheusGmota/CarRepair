@@ -1,0 +1,47 @@
+.mainSection{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #767676;
+    border-radius: 2%;
+    height: 50vh;
+    min-width: 25vw;
+    row-gap: 4vh;
+    padding: 2%;
+    background-color: #18181B;
+    form{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 3vh;
+    
+        > div{
+            display: flex;
+            flex-direction:column;
+            row-gap: 1vh;
+        }
+        input{
+            padding: 3%;
+            width: 22vw;
+            border-radius: 2vh;
+            border: 1px solid #20a4f3;
+            background-color: transparent;
+        }
+        label{
+            color: #20a4f3 ;
+            font-weight: 400;
+        }
+    
+    
+        button:hover{
+            cursor: pointer;
+        }
+    }
+
+}
+
+p > strong > a:hover {
+    color: #20a4f3;
+}
