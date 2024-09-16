@@ -6,7 +6,8 @@
     border: 1px solid #767676;
     border-radius: 2%;
     height: 45vh;
-    width: 25vw;
+    width: 40vw;
+    min-width: 25vw;
     row-gap: 4vh;
     background-color: #18181B;
     form{
@@ -26,22 +27,13 @@
             width: 22vw;
             border-radius: 2vh;
             border: 2px solid #20a4f3;
-            background-color: #252525;
+            background-color: transparent;
         }
         label{
             color: #20a4f3 ;
             font-weight: 400;
         }
     
-        button{
-            padding: 2%;
-            width: 5vw;
-            background-color: #20a4f3;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 500;
-        }
     
         button:hover{
             cursor: pointer;

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm, Resolver } from 'react-hook-form';
 import styles from './Formulario.module.css';
 import Button from '../Button/Button';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 type FormValues = {
   placa: string;
@@ -66,27 +66,27 @@ export const Formulario = () => {
           <div className={styles.forms1}>
             <div>
               <label htmlFor="placa">Placa</label>
-              <input {...register('placa')} placeholder="Digite aqui sua placa" />
+              <input className={styles.input} {...register('placa')} placeholder="Digite aqui sua placa" />
               <span className={styles.err}>{errors?.placa && errors.placa.message}</span>
             </div>
             <div>
               <label htmlFor="marca">Marca</label>
-              <input {...register('marca')} placeholder="Digite aqui a marca do veículo" />
+              <input className={styles.input} {...register('marca')} placeholder="Digite aqui a marca do veículo" />
               <span className={styles.err}>{errors?.marca && errors.marca.message}</span>
             </div>
             <div>
               <label htmlFor="modelo">Modelo</label>
-              <input {...register('modelo')} placeholder="Digite aqui o modelo do veículo" />
+              <input className={styles.input} {...register('modelo')} placeholder="Digite aqui o modelo do veículo" />
               <span className={styles.err}>{errors?.modelo && errors.modelo.message}</span>
             </div>
             <div>
               <label htmlFor="kilometragem">Kilometragem</label>
-              <input {...register('kilometragem')} placeholder="Digite aqui a kilometragem" />
+              <input className={styles.input} {...register('kilometragem')} placeholder="Digite aqui a kilometragem" />
               <span className={styles.err}>{errors?.kilometragem && errors.kilometragem.message}</span>
             </div>
             <div>
               <label htmlFor="ano">Ano</label>
-              <input {...register('ano')} placeholder="Digite aqui o ano" />
+              <input className={styles.input} {...register('ano')} placeholder="Digite aqui o ano" />
               <span className={styles.err}>{errors?.ano && errors.ano.message}</span>
             </div>
             <div>

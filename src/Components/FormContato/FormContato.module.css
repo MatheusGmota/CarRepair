@@ -1,0 +1,38 @@
+.forms {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-self: center;
+}
+
+.label{
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+input {
+    background: transparent;
+    border: 1px solid #0177C8;
+    border-radius: 9px;
+    height: 4.8vh;
+    width: 100%;
+    outline: none;
+    padding: 3%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 4vw;
+    width: 100%;
+    div {
+        width: 100%;
+    }
+}
+
+.txtarea {
+    background-color: transparent;
+}
