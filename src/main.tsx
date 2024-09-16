@@ -20,6 +20,10 @@ const router = createBrowserRouter([
     errorElement: <Error/>,
     children: [
       {
+        path: '/',
+        element: <Orcamento/>
+      },
+      {
         path: '/orcamento',
         element: <Orcamento/>
       },
